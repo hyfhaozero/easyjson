@@ -12,7 +12,7 @@ npm install easyjson
 
 ## 引入库
 
-typescript
+
 import { ej } from 'easyjson';
 
 
@@ -22,7 +22,7 @@ import { ej } from 'easyjson';
 
 使用 ej.new() 创建新的 EasyJson 实例，并可选择传入回调函数。
 
-typescript
+
 const j = ej.new(initialData, (error, result) => {
   if (error) console.error('Error:', error);
   else console.log('Callback result:', result);
@@ -33,7 +33,7 @@ const j = ej.new(initialData, (error, result) => {
 
 通过 search(path) 查找指定路径的数据。
 
-typescript
+
 j.search('family.father.son');  // 返回该节点的数据
 
 
@@ -41,7 +41,7 @@ j.search('family.father.son');  // 返回该节点的数据
 
 通过 del(path) 删除指定路径的节点。
 
-typescript
+
 j.del('family.father.son', (error, success) => {
   if (error) console.error('Delete failed:', error);
   else console.log('Deleted successfully');
@@ -52,7 +52,7 @@ j.del('family.father.son', (error, success) => {
 
 通过 add(path, value, callback) 在指定路径添加新节点，value 可选，默认值为 null。
 
-typescript
+
 j.add('family.father.sister', 'Jane', (error, success) => {
   if (error) console.error('Add failed:', error);
   else console.log('Added successfully');
@@ -63,7 +63,7 @@ j.add('family.father.sister', 'Jane', (error, success) => {
 
 通过 edit(path, value, callback) 修改指定路径节点的内容。
 
-typescript
+
 j.edit('family.father.sister', 'Mary', (error, success) => {
   if (error) console.error('Edit failed:', error);
   else console.log('Edited successfully');
@@ -74,14 +74,14 @@ j.edit('family.father.sister', 'Mary', (error, success) => {
 
 通过 exists(path) 检查指定路径的节点是否存在。
 
-typescript
+
 console.log(j.exists('family.father.son'));  // false
 console.log(j.exists('family.father.sister'));  // true
 
 
 ## 示例
 
-typescript
+
 import { ej } from 'easyjson';
 
 const j = ej.new({ family: { father: { son: 'John' } } });
@@ -119,7 +119,7 @@ npm install easyjson
 
 ## Importing the Library
 
-typescript
+
 import { ej } from 'easyjson';
 
 
@@ -129,7 +129,7 @@ import { ej } from 'easyjson';
 
 Use ej.new() to create a new EasyJson instance. You can optionally pass a callback function.
 
-typescript
+
 const j = ej.new(initialData, (error, result) => {
   if (error) console.error('Error:', error);
   else console.log('Callback result:', result);
@@ -140,7 +140,7 @@ const j = ej.new(initialData, (error, result) => {
 
 Use search(path) to query data at a specific path.
 
-typescript
+
 j.search('family.father.son');  // Returns the data at the given node
 
 
@@ -148,7 +148,7 @@ j.search('family.father.son');  // Returns the data at the given node
 
 Use del(path) to delete a node at a specified path.
 
-typescript
+
 j.del('family.father.son', (error, success) => {
   if (error) console.error('Delete failed:', error);
   else console.log('Deleted successfully');
@@ -159,7 +159,7 @@ j.del('family.father.son', (error, success) => {
 
 Use add(path, value, callback) to add a new node at the specified path. value is optional and defaults to null.
 
-typescript
+
 j.add('family.father.sister', 'Jane', (error, success) => {
   if (error) console.error('Add failed:', error);
   else console.log('Added successfully');
@@ -170,7 +170,7 @@ j.add('family.father.sister', 'Jane', (error, success) => {
 
 Use edit(path, value, callback) to modify the content of an existing node at a specified path.
 
-typescript
+
 j.edit('family.father.sister', 'Mary', (error, success) => {
   if (error) console.error('Edit failed:', error);
   else console.log('Edited successfully');
@@ -181,14 +181,14 @@ j.edit('family.father.sister', 'Mary', (error, success) => {
 
 Use exists(path) to check if a node exists at a specific path.
 
-typescript
+
 console.log(j.exists('family.father.son'));  // false
 console.log(j.exists('family.father.sister'));  // true
 
 
 ## Example
 
-typescript
+
 import { ej } from 'easyjson';
 
 const j = ej.new({ family: { father: { son: 'John' } } });
@@ -208,4 +208,3 @@ j.edit('family.father.sister', 'Mary');
 // Checking if a node exists
 console.log(j.exists('family.father.son'));  // Output: false
 console.log(j.exists('family.father.sister'));  // Output: true
-
